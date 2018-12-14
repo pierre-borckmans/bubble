@@ -1,0 +1,41 @@
+.bubble {
+    background: lightgrey;
+    height: 26px;
+    width: 26px;
+    border-radius: 13px;
+    position: absolute;
+    top: calc(100% - 30px);
+    left: calc(50% - 13px);
+}
+
+.bubble_animated {
+    animation: bounce 10s cubic-bezier(.5,0,.5,1) infinite normal;
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.frame {
+    border-radius: 4px;
+    border-color: grey;
+    border-style: solid;
+    width: 30px;
+    height: calc(100% - 6px); 
+    top:0px;
+    left:0px;    
+    position: absolute;
+}
+@keyframes bounce {
+    0% {
+        transform: none;
+    }
+
+    40% {
+        transform: translateY(-250px);
+    }
+
+    100% {
+        transform: none;
+    }
+}
