@@ -1,5 +1,9 @@
+body {
+    overflow: hidden;
+}
+
 .bubble {
-    background: lightgrey;
+    background: rgba(160,160,160);
     height: 26px;
     width: 26px;
     border-radius: 13px;
@@ -16,9 +20,18 @@
     animation-play-state: paused;
 }
 
+.counter {
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(160,160,160);
+    width: 30px;
+    text-align: center;
+    user-select: none;
+}
+
 .frame {
     border-radius: 4px;
-    border-color: grey;
+    border-color: rgba(160,160,160);
     border-style: solid;
     width: 30px;
     height: calc(100% - 6px); 

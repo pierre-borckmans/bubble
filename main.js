@@ -1,13 +1,14 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow, Menu, nativeImage, Tray} = require('electron')
 const electron = require('electron')
+const path = require('path')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
 function createWindow () {
-  let icon = nativeImage.createFromPath('./iconTemplate.png')
+  let icon = nativeImage.createFromPath(path.join(__dirname,'/assets/iconTemplate.png'))
   let tray = new Tray(icon)
 
   tray.on('click', () => {
@@ -28,7 +29,7 @@ function createWindow () {
       y: 0,
       width: 36,
       height: 285,
-      show: false,
+      show: true,
       frame: false,
       fullscreenable: false,
       resizable: false,
@@ -41,10 +42,9 @@ function createWindow () {
 
   Menu.setApplicationMenu(new Menu());
   mainWindow.setAlwaysOnTop(true)
-  
+
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
-
 }
 
 app.dock.hide()
