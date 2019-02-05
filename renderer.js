@@ -1,3 +1,5 @@
+const app = require('electron').remote.app;
+const window = require('electron').remote.getCurrentWindow();
 let bubble = document.querySelector('.bubble');
 let frame = document.querySelector('.frame');
 let counter = document.querySelector('.counter');
@@ -27,7 +29,6 @@ function reset() {
         bubble.classList.add('paused');
     }
     updateCounter();
-    update();
 }
 
 function togglePause() {
@@ -36,6 +37,7 @@ function togglePause() {
 
 function updateCounter() {
     counterText = ""+(30-iter);
+    update();
 }
 
 function increaseTransparency() {
@@ -64,7 +66,6 @@ bubble.addEventListener('animationiteration', () => {
 });
 
 frame.addEventListener('click', () => {
-    togglePause();
 });
 
 frame.addEventListener('dblclick', () => {
@@ -87,5 +88,6 @@ document.addEventListener('keydown', (event) => {
         reset();
     }
     if (code === 'Escape') {
+        window.hide();
     }
 });
