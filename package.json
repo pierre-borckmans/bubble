@@ -11,12 +11,11 @@
   "repository": "https://github.com/pierre-borckmans/bubble",
   "author": "Pierre Borckmans",
   "devDependencies": {
-    "electron": "^3.0.4",
-    "electron-packager": "^13.0.1"
+    "electron": "^10.1.4",
+    "electron-packager": "^15.1.0"
   },
   "dependencies": {
     "noble": "^1.9.1",
-    "noble-mac": "git://github.com/Timeular/noble-mac.git",
-    "xpc-connection": "git://github.com/taoyuan/node-xpc-connection.git"
+    "noble-mac": "git://github.com/Timeular/noble-mac.git"
   }
 }

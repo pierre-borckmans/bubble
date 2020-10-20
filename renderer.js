@@ -1,5 +1,6 @@
-const app = require('electron').remote.app;
-const window = require('electron').remote.getCurrentWindow();
+const ipc = require('electron').ipcRenderer
+// ipc.send('message', 'click');
+
 let bubble = document.querySelector('.bubble');
 let frame = document.querySelector('.frame');
 let counter = document.querySelector('.counter');
