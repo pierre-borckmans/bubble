@@ -11,7 +11,7 @@
   "repository": "https://github.com/pierre-borckmans/bubble",
   "author": "Pierre Borckmans",
   "devDependencies": {
-    "electron": "^10.1.4",
+    "electron": "^15.5.5",
     "electron-packager": "^15.1.0"
   },
   "dependencies": {
